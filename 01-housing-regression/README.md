@@ -29,3 +29,23 @@ coefficients — the outliers were the main source of error, not model complexit
 - Polynomial features to capture non-linear relationships
 - Lasso regression for feature selection
 - Try a tree-based model (Random Forest) for comparison
+
+## From-scratch implementation
+
+Also implemented linear regression fully from scratch (no sklearn) — manual train/test 
+split, feature standardization, cost function, and gradient descent, to build the 
+math intuition behind what `.fit()` does under the hood.
+
+| Model | RMSE | R² |
+|---|---|---|
+| sklearn Linear Regression (capped) | 11,29,536 | 0.684 |
+| From-scratch Linear Regression (capped) | 9,77,374 | 0.700 |
+
+The from-scratch version slightly outperformed sklearn's closed-form solution — 
+likely due to train/test split randomness rather than any real difference in 
+model quality, since both converge to the same convex optimum. Feature scaling 
+(standardization) was essential here, since gradient descent is sensitive to 
+feature magnitude differences in a way sklearn's closed-form solver isn't.
+
+See [`house_price_prediction_from_scratch.ipynb`](./house_price_prediction_from_scratch.ipynb) 
+for the full implementation.
