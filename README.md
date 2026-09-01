@@ -7,6 +7,7 @@ A running collection of ML/AI projects built while working through my learning r
 | 02 | [Loan Approval Prediction](./02-loan-approval) | Logistic regression, feature scaling (StandardScaler), one-hot encoding, coefficient interpretation | Accuracy 0.905, Recall (Rejected) 0.86 (scaled) vs 0.61 (unscaled) |
 | 03 | [Purchase Prediction](./03-purchase-prediction) | Feedforward neural network (TensorFlow/Keras), synthetic data with engineered interaction term, baseline comparison vs logistic regression | Accuracy 0.74 (NN) vs 0.75 (logistic regression) vs 0.71 (naive baseline) |
 | 04 | [Neural Network From Scratch](./04-nn-from-scratch) | Manual forward propagation in NumPy (matrix multiplication, bias, sigmoid), validated against a trained Keras model | Max difference vs Keras: 7.62e-08; accuracy match: 0.74 (identical) |
+| 05 | [Fashion-MNIST Classifier](./05-fashion-mnist-classifier) | Multiclass NN (Softmax, ReLU), image normalization/flattening, EarlyStopping, confusion matrix, per-class error analysis | Test accuracy 0.863 — per-class range 0.484 (Shirt) to 0.977 (Ankle boot); errors concentrated among visually similar upper-body garments |
 *(More projects added as I progress — classification, regularization comparisons, neural networks, and eventually RAG/agents.)*
 ## Background
 Currently working through Andrew Ng's Machine Learning Specialization (Coursera), building a project after key concepts to reinforce them practically rather than just completing course exercises.
